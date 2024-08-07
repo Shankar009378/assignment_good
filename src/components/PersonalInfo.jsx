@@ -51,7 +51,7 @@ export default function PersonalInfo() {
         </Typography>
       </Box>
 
-      <Box sx={{ display: 'flex', justifyContent: 'space-between', marginTop: 4, p: 1 }}>
+      <Box sx={{ display:'flex', flexDirection: { xs: "column", md: "row", lg: "row" }, justifyContent: 'space-between', marginTop: 4, p: 1 }}>
         <ProfileCard />
         <TipsCard />
       </Box>

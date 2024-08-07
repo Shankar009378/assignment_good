@@ -3,18 +3,14 @@ import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
-import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import EmojiObjectsIcon from "@mui/icons-material/EmojiObjects";
-
-const bull = (
-  <Box
-    component="span"
-    sx={{ display: "inline-block", mx: "2px", transform: "scale(0.8)" }}
-  >
-    ●
-  </Box>
-);
+import tipsImage from "../assets/tipsImage.png";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 
 const card = (
   <React.Fragment>
@@ -24,94 +20,55 @@ const card = (
           display: "flex",
           justifyContent: "flex-end",
           alignItems: "center",
+          mb: 2,
+          bgcolor: "#E9F7E6",
+          padding: 1,
+          borderRadius: 5,
+          width: "35%",
+          marginLeft: 15,
         }}
       >
-        <EmojiObjectsIcon sx={{ color: "#003C2F", opacity: 0.8 }} />
-        <Typography
-          sx={{
-            fontWeight: 400,
-            fontSize: 16,
-            lineHeight: "19.2px",
-            color: "#003C2F",
-            opacity: 0.8,
-          }}
-        >
+        <EmojiObjectsIcon sx={{ color: "#22AD01", opacity: 0.8 }} />
+        <Typography sx={{ color: "#22AD01", opacity: 0.8, fontWeight: 400 }}>
           Tips
         </Typography>
       </Box>
-
-      <Box sx={{ mt: 2 }}>
-        <Typography
-          variant="body2"
-          sx={{
-            color: "#00120E",
-            fontWeight: 500,
-            fontSize: 15,
-            lineHeight: "22px",
-          }}
-        >
-          {bull}
-          It's best to use a professional email. One that includes your full
-          name is best.
-        </Typography>
-        <Typography
-          variant="body2"
-          sx={{
-            color: "#00120E",
-            fontWeight: 500,
-            fontSize: 15,
-            lineHeight: "22px",
-            mt: 1,
-          }}
-        >
-          {bull} Gmail is the preferred email client. Addresses from Yahoo or
-          Hotmail tend to look outdated.
-        </Typography>
-      </Box>
+      <List >
+        <ListItem sx={{ alignItems: 'flex-start' }}>
+          <ListItemIcon sx={{ minWidth: "auto", mr: 1, mt: 1.2 }}>
+            <FiberManualRecordIcon sx={{ fontSize: 10, color: "#00120E" }} />
+          </ListItemIcon>
+          <ListItemText
+            primary="It's best to use a professional email. One that includes your full name is best."
+            primaryTypographyProps={{
+              sx: { color: "#00120E", fontWeight: 500, fontSize: 15, lineHeight: '22px' },
+            }}
+          />
+        </ListItem>
+        <ListItem sx={{ alignItems: 'flex-start' }}>
+          <ListItemIcon sx={{ minWidth: "auto", mr: 1, mt: 1.2 }}>
+            <FiberManualRecordIcon sx={{ fontSize: 10, color: "#00120E" }} />
+          </ListItemIcon>
+          <ListItemText
+            primary="Gmail is the preferred email client. Addresses from Yahoo or Hotmail tend to look outdated."
+            primaryTypographyProps={{
+              sx: { color: "#00120E", fontWeight: 500, fontSize: 15, lineHeight: '22px' },
+            }}
+          />
+        </ListItem>
+      </List>
     </CardContent>
-    <CardActions>
-      <Box
-        sx={{
-          position: "relative",
-          width: "100%",
-          height: 60,
-          display: "flex",
-          alignItems: "flex-end",
-        }}
-      >
-        <Box
-          component="img"
-          src="../assets/tipsImage.png"
-          sx={{
-            width: "50%",
-            height: "100%",
-            objectFit: "cover",
-            position: "absolute",
-            left: 0,
-            bottom: 0,
-          }}
-        />
-        <Box
-          component="img"
-          src="../assets/tipsMask.png"
-          sx={{
-            width: "50%",
-            height: "100%",
-            objectFit: "cover",
-            position: "absolute",
-            right: 0,
-            bottom: 0,
-          }}
-        />
-      </Box>
-    </CardActions>
+    <Box sx={{ display: "flex", mb: -2}}>
+      <img src={tipsImage} alt="Profile" style={{ width: 200, height: 200 }} />
+    </Box>
+    <CardActions></CardActions>
   </React.Fragment>
 );
 
 export default function TipsCard() {
   return (
     <Box sx={{ maxWidth: 222 }}>
-      <Card variant="outlined">{card}</Card>
+      <Card variant="elevation" sx={{ borderRadius: "13.18px" }}>{card}</Card>
     </Box>
   );
 }

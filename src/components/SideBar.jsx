@@ -137,7 +137,7 @@ export default function SideBar() {
   };
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: "flex", height: '100%', width: '100%', backgroundColor: "#F2F7F2" }}>
       <CssBaseline />
       <AppBar position="fixed" open={open}>
         <Toolbar>
@@ -195,7 +195,7 @@ export default function SideBar() {
       </Box> */}
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <DrawerHeader />
-        <Box sx={{ position: "absolute", bottom: 0, width: "100%", p: 2 }}>
+        {/* <Box sx={{ position: "absolute", bottom: 0, width: "100%", p: 2 }}>
           <Button
             color="inherit"
             disabled={activeStep === 0}
@@ -207,7 +207,7 @@ export default function SideBar() {
           <Button onClick={handleNext} sx={{ ml: 1 }}>
             {activeStep === 1 ? "Finish" : "Next"}
           </Button>
-        </Box>
+        </Box> */}
         {renderStepContent()}
       </Box>
     </Box>
