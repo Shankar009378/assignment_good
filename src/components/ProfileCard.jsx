@@ -5,8 +5,7 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import { styled } from "@mui/material/styles";
-import { Avatar, Grid, Input, Paper, Stack, TextField } from "@mui/material";
+import { Grid, Stack } from "@mui/material";
 import profileImage from "../assets/profileImage.png";
 import InfoIcon from "@mui/icons-material/Info";
 
@@ -15,7 +14,7 @@ const labels = ["City", "Country", "Pincode"];
 const card = (
   <React.Fragment>
     <CardContent>
-      <Box sx={{ display: "flex", flexDirection: { xs: "column", md: "column", lg: "row" }, justifyContent: "space-between", gap: 3 }}>
+      <Box sx={{ display: "flex", flexDirection: { xs: "column", md: "column", lg: "row" }, gap: 3 }}>
         <img
           alt="Profile Picture"
           src={profileImage}
@@ -391,8 +390,8 @@ const card = (
 
 export default function ProfileCard() {
   return (
-    <Box sx={{ width: "75%" }}>
-      <Card variant="elevation">{card}</Card>
+    <Box sx={{ width: "100%", marginRight: {lg: 2} }}>
+      <Card variant="elevation" sx={{ borderRadius: "13.18px" }}>{card}</Card>
 
       <Stack spacing={2} direction="row" sx={{display: 'flex', justifyContent: {xs: 'center', md: 'center', lg: 'flex-end' }, marginTop: { xs: 3, md: 3, lg: 5 }, marginBottom: {xs: 3, md: 3, lg: 0}}}>
         <Button

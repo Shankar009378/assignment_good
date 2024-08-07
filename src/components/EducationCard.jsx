@@ -279,7 +279,7 @@ const card = (
 export default function EducationCard() {
   return (
     <Box sx={{ width: "100%", marginRight: {lg: 2} }}>
-      <Card variant="elevation">{card}</Card>
+      <Card variant="elevation" sx={{ borderRadius: "13.18px" }}>{card}</Card>
       <Stack
         spacing={2}
         direction="row"

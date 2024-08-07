@@ -16,7 +16,8 @@ const CustomButton = styled(Button)(({ theme }) => ({
 
 export default function PersonalInfo() {
   return (
-    <Box sx={{width: '100%'}}>
+    <Box>
+      <Box>
         <CustomButton variant="text" startIcon={<ArrowBackIcon />}>
           Go Back
         </CustomButton>
@@ -25,10 +26,9 @@ export default function PersonalInfo() {
           sx={{
             mt: 2,
             p: 1,
-            width: '60%',
             fontWeight: 600,
             fontSize: 34,
-            lineHeight: '44px',
+            lineHeight: "44px",
             color: "#003C2F",
           }}
         >
@@ -38,18 +38,31 @@ export default function PersonalInfo() {
         <Typography
           sx={{
             p: 1,
-            width: '60%',
             fontWeight: 400,
             fontSize: 16,
-            lineHeight: '19.2px',
+            lineHeight: "19.2px",
             color: "#003C2F",
-            opacity: 0.8
+            opacity: 0.8,
           }}
         >
           We suggest including an email and phone number.
         </Typography>
+      </Box>
 
-      <Box sx={{ display:'flex', flexDirection: { xs: "column", md: "row", lg: "row" }, justifyContent: 'space-between', marginTop: 4, p: 1 }}>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: {
+            xs: "column",
+            sm: "column",
+            md: "column",
+            lg: "row",
+          },
+          justifyContent: "space-between",
+          marginTop: 4,
+          p: 1,
+        }}
+      >
         <ProfileCard />
         <TipsCard />
       </Box>

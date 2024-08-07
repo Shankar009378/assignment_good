@@ -76,7 +76,7 @@ function SideBar(props) {
       sx={{
         display: "flex",
         height: "100%",
-        width: { xs: "100%", md: "100%", lg: "100%" },
+        width: "100%",
         backgroundColor: "#F2F7F2",
       }}
     >
