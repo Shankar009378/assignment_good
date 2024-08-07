@@ -305,7 +305,7 @@ const card = (
           <InfoIcon sx={{ color: "#22AD01", backgroundColor: "#E9F7E6" }} />
         </Box>
 
-        <Box sx={{display: 'flex', gap: '7px'}}>
+        <Box sx={{ display: "flex", gap: "7px" }}>
           <Button
             variant="contained"
             disableRipple
@@ -391,6 +391,53 @@ export default function ProfileCard() {
   return (
     <Box sx={{ width: "75%" }}>
       <Card variant="elevation">{card}</Card>
+
+      <Stack spacing={2} direction="row" sx={{display: 'flex', justifyContent: 'flex-end', marginTop: 5}}>
+        <Button
+          variant="text"
+          sx={{
+            "&:hover": {
+              textDecoration: "underline",
+              textDecorationColor: "#003C2F",
+            },
+          }}
+        >
+          <Typography
+            sx={{
+              color: "#003C2F",
+              fontSize: 12,
+              lineHeight: "14.4px",
+              fontWeight: 600,
+            }}
+          >
+            PREVIEW
+          </Typography>
+        </Button>
+        <Button
+          variant="contained"
+          disableRipple
+          sx={{
+            backgroundColor: "#22AD01",
+            borderRadius: "8px",
+            "&:hover": {
+              backgroundColor: "#22AD01",
+            },
+            marginTop: 2,
+            padding: "16px 32px 16px 32px",
+          }}
+        >
+          <Typography
+            sx={{
+              color: "#FFFFF",
+              fontSize: 12,
+              lineHeight: "14.4px",
+              fontWeight: 600,
+            }}
+          >
+            NEXT: EDUCATION
+          </Typography>
+        </Button>
+      </Stack>
     </Box>
   );
 }
