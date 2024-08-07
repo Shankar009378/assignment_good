@@ -21,44 +21,62 @@ const card = (
           justifyContent: "flex-end",
           alignItems: "center",
           mb: 2,
-          bgcolor: "#E9F7E6",
-          padding: 1,
-          borderRadius: 5,
-          width: "35%",
+          width: { xs: "57%", md: 0, lg: "35%" },
           marginLeft: 15,
         }}
       >
-        <EmojiObjectsIcon sx={{ color: "#22AD01", opacity: 0.8 }} />
-        <Typography sx={{ color: "#22AD01", opacity: 0.8, fontWeight: 400 }}>
-          Tips
-        </Typography>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "flex-end",
+            alignItems: "center",
+            backgroundColor: "#E9F7E6",
+            padding: 5,
+            borderRadius: 10,
+          }}
+        >
+          <EmojiObjectsIcon sx={{ color: "#22AD01", opacity: 0.8 }} />
+          <Typography sx={{ color: "#22AD01", opacity: 0.8, fontWeight: 400 }}>
+            Tips
+          </Typography>
+        </div>
       </Box>
-      <List >
-        <ListItem sx={{ alignItems: 'flex-start' }}>
+      <List>
+        <ListItem sx={{ alignItems: "flex-start" }}>
           <ListItemIcon sx={{ minWidth: "auto", mr: 1, mt: 1.2 }}>
             <FiberManualRecordIcon sx={{ fontSize: 10, color: "#00120E" }} />
           </ListItemIcon>
           <ListItemText
             primary="It's best to use a professional email. One that includes your full name is best."
             primaryTypographyProps={{
-              sx: { color: "#00120E", fontWeight: 500, fontSize: 15, lineHeight: '22px' },
+              sx: {
+                color: "#00120E",
+                fontWeight: 500,
+                fontSize: 15,
+                lineHeight: "22px",
+              },
             }}
           />
         </ListItem>
-        <ListItem sx={{ alignItems: 'flex-start' }}>
+        <ListItem sx={{ alignItems: "flex-start" }}>
           <ListItemIcon sx={{ minWidth: "auto", mr: 1, mt: 1.2 }}>
             <FiberManualRecordIcon sx={{ fontSize: 10, color: "#00120E" }} />
           </ListItemIcon>
           <ListItemText
             primary="Gmail is the preferred email client. Addresses from Yahoo or Hotmail tend to look outdated."
             primaryTypographyProps={{
-              sx: { color: "#00120E", fontWeight: 500, fontSize: 15, lineHeight: '22px' },
+              sx: {
+                color: "#00120E",
+                fontWeight: 500,
+                fontSize: 15,
+                lineHeight: "22px",
+              },
             }}
           />
         </ListItem>
       </List>
     </CardContent>
-    <Box sx={{ display: "flex", mb: -2}}>
+    <Box sx={{ display: "flex", mb: -2 }}>
       <img src={tipsImage} alt="Profile" style={{ width: 200, height: 200 }} />
     </Box>
     <CardActions></CardActions>
@@ -67,8 +85,10 @@ const card = (
 
 export default function TipsCard() {
   return (
-    <Box sx={{ maxWidth: 222 }}>
-      <Card variant="elevation" sx={{ borderRadius: "13.18px" }}>{card}</Card>
+    <Box sx={{ width: { xs: "100%", md: "100%", lg: 222 }, }}>
+      <Card variant="elevation" sx={{ borderRadius: "13.18px" }}>
+        {card}
+      </Card>
     </Box>
   );
 }

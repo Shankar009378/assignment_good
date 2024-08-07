@@ -15,7 +15,7 @@ const labels = ["City", "Country", "Pincode"];
 const card = (
   <React.Fragment>
     <CardContent>
-      <Box sx={{ display: "flex", justifyContent: "space-between", gap: 3 }}>
+      <Box sx={{ display: "flex", flexDirection: { xs: "column", md: "column", lg: "row" }, justifyContent: "space-between", gap: 3 }}>
         <img
           alt="Profile Picture"
           src={profileImage}
@@ -128,6 +128,7 @@ const card = (
           justifyContent: "space-between",
           alignItems: "center",
           marginTop: 2,
+          flexDirection: { xs: "column", md: "column", lg: "row" }
         }}
       >
         <Button
@@ -139,9 +140,10 @@ const card = (
             "&:hover": {
               backgroundColor: "#E9F7E6",
             },
-            marginTop: 3.5,
+            marginTop: { xs: 1, md: 1, lg: 3.5 },
+            marginBottom: { xs: 2, md: 2, lg: 0 },
             padding: 2,
-            width: "22%",
+            width: { xs: "70%", md: "100%", lg: "22%" }
           }}
         >
           <Typography
@@ -155,7 +157,7 @@ const card = (
             UPLOAD PHOTO
           </Typography>
         </Button>
-        <Box sx={{ width: "74%" }}>
+        <Box sx={{  width: { xs: "100%", md: "100%", lg: "74%" } }}>
           <div>
             <label
               htmlFor="city"
@@ -186,7 +188,7 @@ const card = (
         </Box>
       </Box>
 
-      <Box sx={{ flexGrow: 1, marginTop: 2 }}>
+      <Box sx={{ flexGrow: 1,  marginTop: 2 }}>
         <Grid
           container
           spacing={{ xs: 2, md: 3 }}
@@ -392,7 +394,7 @@ export default function ProfileCard() {
     <Box sx={{ width: "75%" }}>
       <Card variant="elevation">{card}</Card>
 
-      <Stack spacing={2} direction="row" sx={{display: 'flex', justifyContent: 'flex-end', marginTop: 5}}>
+      <Stack spacing={2} direction="row" sx={{display: 'flex', justifyContent: {xs: 'center', md: 'center', lg: 'flex-end' }, marginTop: { xs: 3, md: 3, lg: 5 }, marginBottom: {xs: 3, md: 3, lg: 0}}}>
         <Button
           variant="text"
           sx={{

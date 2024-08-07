@@ -232,25 +232,39 @@ const card = (
       <Box
         sx={{ display: "flex", justifyContent: "space-between", marginTop: 2 }}
       >
-        <div style={{backgroundColor: '#F2F7F2', borderRadius: '8px', padding: '8px'}}>
+        <div
+          style={{
+            backgroundColor: "#F2F7F2",
+            borderRadius: "8px",
+            padding: "8px",
+          }}
+        >
           <IconButton>
-            <BoldIcon style={{width: 20, height: 20}}/>
+            <BoldIcon style={{ width: 20, height: 20 }} />
           </IconButton>
           <IconButton>
-            <ItalicIcon style={{width: 20, height: 20}} />
+            <ItalicIcon style={{ width: 20, height: 20 }} />
           </IconButton>
           <IconButton>
-            <UnderlineIcon style={{width: 20, height: 20}} />
+            <UnderlineIcon style={{ width: 20, height: 20 }} />
           </IconButton>
         </div>
-        <div style={{ display: "flex", alignItems: "center", backgroundColor: '#E9F7E6', padding: '0px 16px 0px 16px', borderRadius: '8px'  }}>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            backgroundColor: "#E9F7E6",
+            padding: "0px 16px 0px 16px",
+            borderRadius: "8px",
+          }}
+        >
           <AiIcon sx={{ color: "#22AD01", marginRight: 1 }} />
           <Typography
             sx={{
               fontSize: 13,
               fontWeight: 600,
               lineHeight: "15.6px",
-              color: '#22AD01'
+              color: "#22AD01",
             }}
           >
             Use AI
@@ -264,13 +278,17 @@ const card = (
 
 export default function EducationCard() {
   return (
-    <Box sx={{ width: "75%" }}>
+    <Box sx={{ width: "100%", marginRight: {lg: 2} }}>
       <Card variant="elevation">{card}</Card>
-
       <Stack
         spacing={2}
         direction="row"
-        sx={{ display: "flex", justifyContent: "flex-end", marginTop: 5 }}
+        sx={{
+          display: "flex",
+          justifyContent: { xs: "center", md: "center", lg: "flex-end" },
+          marginTop: { xs: 3, md: 3, lg: 5 },
+          marginBottom: { xs: 3, md: 3, lg: 0 },
+        }}
       >
         <Button
           variant="text"

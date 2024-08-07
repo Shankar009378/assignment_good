@@ -38,7 +38,7 @@ export default function Education() {
         <Typography
           sx={{
             p: 1,
-            width: "45%",
+            width: {xs: '100%', md: '100%', lg: '45%'},
             fontWeight: 400,
             fontSize: 16,
             lineHeight: "24px",
@@ -54,7 +54,7 @@ export default function Education() {
       <Box
         sx={{
           display: "flex",
-          flexDirection: { xs: "column", md: "row", lg: "row" },
+          flexDirection: { xs: "column", sm: 'column', md: "column", lg: "row" },
           justifyContent: "space-between",
           marginTop: 4,
           p: 1,
